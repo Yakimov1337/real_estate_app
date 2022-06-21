@@ -25,9 +25,9 @@ const Property = ({
   <Link href={`/property/${externalId} passHref`}>
     <Flex
       flexWrap="wrap"
-      w="420"
+      w="420px"
       p="5"
-      paddingTop="0"
+      paddingTop="0px"
       justifyContent="flex-start"
       cursor="pointer"
     >
@@ -38,6 +38,16 @@ const Property = ({
           height={260}
           alt="house"
         />
+      </Box>
+      <Box w="full">
+        <Flex paddingTop='2' alignItems='center' justifyContent='space-between'>
+          <Flex alignItems="center">
+            <Box paddingRight="3" color="green.400">
+                {isVerified&&<GoVerified/>}
+            </Box>
+            <Text fontWeight="bold" fontSize="lg">AED {millify(price)}{rentFrequency && `/${rentFrequency}`}</Text> 
+          </Flex>
+        </Flex>
       </Box>
     </Flex>
   </Link>
