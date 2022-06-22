@@ -9,12 +9,14 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+      </Head>
         <ChakraProvider>
           <Layout>
-            <Component {...pageProps}/>
+            <Component {...pageProps} />
           </Layout>
         </ChakraProvider>
-      </Head></>)
+    </>
+  )
 }
 
 export default MyApp
